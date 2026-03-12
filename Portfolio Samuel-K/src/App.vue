@@ -3,23 +3,25 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import ProposDeMoi from './components/ProposDeMoi.vue'
 import QuickLinks from './components/QuickLinks.vue'
-
+// definir les types pour les sections
 type SectionId = 'home' | 'apropos' | 'liens'
-
+// definir une ref pour la section active
 const activeSection = ref<SectionId>('home')
+// definir les sections a observer pour le changement de section active
 const sectionIds: SectionId[] = ['home', 'apropos', 'liens']
+// definir une variable pour l'observer d'intersection
 let observer: IntersectionObserver | null = null
-
+// fonction pour faire defiler en douceur vers une section cible
 const scrollToSection = (targetId: SectionId) => {
   const target = document.getElementById(targetId)
   if (!target) {
     return
   }
-
+// constantes pour calculer la position de defilement en tenant compte de la hauteur de la barre de navigation
   const nav = document.querySelector('.top-nav') as HTMLElement | null
   const navHeight = nav?.offsetHeight ?? 0
   const top = target.getBoundingClientRect().top + window.scrollY
-
+// defilement en douceur vers la position cible moins la hauteur de la barre de navigation et un petit offset
   window.scrollTo({
     top: Math.max(top - navHeight - 10, 0),
     behavior: 'smooth',
@@ -27,15 +29,15 @@ const scrollToSection = (targetId: SectionId) => {
 
   activeSection.value = targetId
 }
-
+// utiliser l'observer d'intersection pour detecter quelle section est visible et mettre a jour la section active en consequence
 onMounted(() => {
   // Prevent browser from restoring previous scroll position on refresh.
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual'
   }
-
+// être sur de commencer en haut de la page lors du chargement
   window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-
+// creer un nouvel observer d'intersection avec des seuils pour detecter quand une section devient visible
   observer = new IntersectionObserver(
     (entries) => {
       const visible = entries
@@ -58,7 +60,7 @@ onMounted(() => {
     },
     { threshold: [0.35, 0.6, 0.8] }
   )
-
+// observer les sections definies pour detecter les changements de section active
   sectionIds.forEach((id) => {
     const el = document.getElementById(id)
     if (el) {
@@ -109,7 +111,7 @@ onUnmounted(() => {
 :global(body) {
   margin: 0;
 }
-
+/* styles pour la navigation fixe en haut de la page */
 .top-nav {
   position: fixed;
   top: 0;
@@ -143,7 +145,7 @@ onUnmounted(() => {
   background-color: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.72);
 }
-
+/* styles pour les sections de la page et les animations d'apparition */
 .page-stack {
   line-height: 1.5;
 }

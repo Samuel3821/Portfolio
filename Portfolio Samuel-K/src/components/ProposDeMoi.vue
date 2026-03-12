@@ -36,10 +36,11 @@ defineProps<{
 </template>
 
 <style scoped>
+/*mettre un scroll sur la section a propos de moi */
 .about-scroll {
   width: min(960px, 100%);
 }
-
+/*modification style cv */
 .cv-wrap {
   margin-top: 0.5rem;
   text-align: center;
@@ -62,7 +63,7 @@ defineProps<{
   border-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-1px);
 }
-
+/* toute la section  */
 .about-details {
   width: 100%;
   color: #fff;
@@ -76,7 +77,6 @@ defineProps<{
   padding: 1.1rem 1.2rem;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-
 .about-details:hover {
   border-color: rgba(255, 255, 255, 0.35);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
@@ -85,7 +85,7 @@ defineProps<{
 .about-details p {
   margin: 0 0 1rem;
 }
-
+/* modifier affichage texte */
 .details-title {
   margin: 0 0 1rem;
   font-size: clamp(2rem, 4.5vw, 3.2rem);
