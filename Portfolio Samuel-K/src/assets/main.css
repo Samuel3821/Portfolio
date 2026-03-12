@@ -8,28 +8,27 @@
 }
 
 a,
-.green {
+.white {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: rgb(241, 237, 237);
   transition: 0.4s;
   padding: 3px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: rgba(255, 255, 255, 0.14);
   }
 }
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    place-items: center;
+    display: block;
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: block;
+    max-width: 980px;
+    padding: 2rem;
   }
 }
