@@ -14,9 +14,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies
+        working-directory: ./Portfolio Samuel-K
         run: npm install
 
       - name: Build project
+        working-directory: ./Portfolio Samuel-K
         run: npm run build
 
       - name: Deploy via FTP
@@ -27,5 +29,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          local-dir: ./dist/
+          local-dir: ./Portfolio Samuel-K/dist/
           server-dir: /web/
