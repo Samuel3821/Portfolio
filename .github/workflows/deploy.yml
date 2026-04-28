@@ -13,21 +13,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2. Installer Node.js 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # 3. Installer les dépendances
       - name: Install dependencies
-        working-directory: ./Portfolio Samuel-K
+        working-directory: ./portfolio-samuel-k
         run: npm install
 
+      # 4. Build du projet Vue/Vite
       - name: Build project
-        working-directory: ./Portfolio Samuel-K
+        working-directory: ./portfolio-samuel-k
         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      # 5. Deploy via SFTP (Infomaniak)
+      - name: Deploy via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./Portfolio Samuel-K/dist/
-          server-dir: /web/
+          port: 22
+          source: "portfolio-samuel-k/dist/*"
+          target: "/web/"
