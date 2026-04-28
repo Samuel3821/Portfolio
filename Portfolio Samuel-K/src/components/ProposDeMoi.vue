@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import iconProposDeMoi from './icons/IconProposDeMoi.jpg'
+import cvSamuelKappel from './CV/CV_Samuel_Kappel.pdf'
+
 defineProps<{
   msg: string
 }>()
@@ -7,7 +10,11 @@ defineProps<{
 <template>
   <section class="about-scroll">
     <div class="about-details">
-        <h2 class="details-title">{{ msg }}</h2>
+        <div class="details-header">
+          <img :src="iconProposDeMoi" alt="AProposDeMoi" class="details-icon">
+          <h2 class="details-title">{{ msg }}</h2>
+        </div>
+
         <p>
           Jeune diplome d'un Bachelor en informatique de gestion a la HEG, je m'interesse
           particulierement au developpement d'applications et a la gestion des donnees.
@@ -24,12 +31,12 @@ defineProps<{
           utilisateurs, rediger des user stories et suivre le deploiement de solutions numeriques.
         </p>
         <p>
-          Curieux et motive, j'aime comprendre le fonctionnement des systemes informatiques et
+          Curieux et motivé, j'aime comprendre le fonctionnement des systemes informatiques et
           developper des solutions concretes. Je realise regulierement des projets personnels pour
           explorer de nouvelles technologies et renforcer mes competences.
         </p>
         <div class="cv-wrap">
-          <a class="cv-link" href="/mon-document.pdf" download="titre-du-fichier.pdf">Mon CV</a>
+          <a class="cv-link" :href="cvSamuelKappel" download="CV_Samuel_Kappel.pdf">Mon CV</a>
         </div>
     </div>
   </section>
@@ -85,9 +92,24 @@ defineProps<{
 .about-details p {
   margin: 0 0 1rem;
 }
-/* modifier affichage texte */
-.details-title {
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  justify-content: center;
   margin: 0 0 1rem;
+}
+
+.details-icon {
+  width: 72px;
+  height: 72px;
+  object-fit:contain;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.details-title {
+  margin: 0;
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   text-align: center;
 }
@@ -111,6 +133,15 @@ defineProps<{
 @media (max-width: 768px) {
   .about-details {
     font-size: 1rem;
+  }
+
+  .details-header {
+    gap: 0.65rem;
+  }
+
+  .details-icon {
+    width: 56px;
+    height: 56px;
   }
 }
 </style>

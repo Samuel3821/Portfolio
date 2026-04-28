@@ -26,7 +26,7 @@
 
       <a
         class="link-card"
-        href="https://github.com/Samuel3821"
+        href="https://github.com/Samuel3821?tab=repositories"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Voir mon profil GitHub"
@@ -45,6 +45,13 @@
         </span>
       </a>
     </div>
+
+    <section class="site-note" aria-label="Site en construction">
+      <p>
+        Site en construction, n'hésitez pas à me contacter pour en savoir plus sur mon parcours
+        et mes projets !
+      </p>
+    </section>
   </section>
 </template>
 
@@ -116,6 +123,25 @@ h2 {
 
 .text small {
   opacity: 0.85;
+}
+
+.site-note {
+  width: 100%;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;
+  animation: fade-up 0.55s ease;
+  background-color: rgba(0, 0, 0, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  margin-top: 1.5rem;
+}
+
+.site-note p {
+  margin: 0;
 }
 
 @keyframes fade-up {
