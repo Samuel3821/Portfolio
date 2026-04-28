@@ -3,7 +3,8 @@ Un portoflio de mes compétences et expériences passées
 
 
 # Installation 
-
+Rentrer dans le dossier du projet :
+Portfolio\Portfolio Samuel-K
 
 npm install
 
