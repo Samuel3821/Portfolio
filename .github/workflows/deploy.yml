@@ -33,4 +33,4 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: "./Portfolio Samuel-K/dist/"
-          server-dir: "/web/"
+          server-dir: "/"
