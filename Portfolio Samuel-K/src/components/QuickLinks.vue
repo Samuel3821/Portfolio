@@ -44,6 +44,27 @@
           <small>Mes projets de code</small>
         </span>
       </a>
+      <!-- lien Travail de Bachelor -->
+      <a
+        class="link-card"
+        href="https://sonar.rero.ch/hesso/documents/335137"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Voir mon travail de Bachelor"
+      >
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" focusable="false">
+            <!-- path qui dessine un carré -->
+            <path
+              d="M4 2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm7.5 5h-3v8h3V7zm5.5 0h-3v8h3V7z"
+            />
+          </svg>
+        </span>
+        <span class="text">
+          <strong>Travail de Bachelor</strong>
+          <small>Les dangers du Shadow AI sur la protection des données</small>
+        </span>
+      </a>
     </div>
 
     <section class="site-note" aria-label="Site en construction">
