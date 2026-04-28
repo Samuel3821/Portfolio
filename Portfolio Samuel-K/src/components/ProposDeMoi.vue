@@ -16,24 +16,24 @@ defineProps<{
         </div>
 
         <p>
-          Jeune diplome d'un Bachelor en informatique de gestion a la HEG, je m'interesse
-          particulierement au developpement d'applications et a la gestion des donnees.
+          Jeune diplômé d'un Bachelor en informatique de gestion à la HEG, 
+          je m'intéresse particulièrement au développement d'applications et à la gestion des données.
         </p>
         <p>
-          Durant mes etudes, j'ai travaille sur plusieurs projets pratiques utilisant des
-          technologies comme SQL / Oracle, PL/SQL, React et Visual Studio. Ces experiences m'ont
-          permis de developper des competences en programmation, en conception de bases de donnees
-          et en resolution de problemes techniques.
+          Durant mes études, j'ai travaillé sur plusieurs projets pratiques utilisant des technologies comme 
+          SQL / Oracle, PL/SQL, React et Visual Studio. Ces expériences m'ont permis de développer des compétences en 
+          programmation, 
+          en conception de bases de données et en résolution de problèmes techniques.
         </p>
         <p>
-          J'ai egalement acquis des competences en gestion de projet, notamment en tant que
-          Business Analyst, avec des methodes Scrum et agiles, pour comprendre les besoins
-          utilisateurs, rediger des user stories et suivre le deploiement de solutions numeriques.
+          J'ai également acquis des compétences en gestion de projet, notamment en tant que Business Analyst, 
+          avec des méthodes Scrum et agiles, pour comprendre les besoins utilisateurs, 
+          rédiger des user stories et suivre le déploiement de solutions numériques.
         </p>
         <p>
-          Curieux et motivé, j'aime comprendre le fonctionnement des systemes informatiques et
-          developper des solutions concretes. Je realise regulierement des projets personnels pour
-          explorer de nouvelles technologies et renforcer mes competences.
+          Curieux et motivé, j'aime comprendre le fonctionnement des systèmes informatiques et 
+          développer des solutions concrètes. Je réalise régulièrement des projets personnels 
+          pour explorer de nouvelles technologies et renforcer mes compétences.
         </p>
         <div class="cv-wrap">
           <a class="cv-link" :href="cvSamuelKappel" download="CV_Samuel_Kappel.pdf">Mon CV</a>
